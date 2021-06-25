@@ -19,9 +19,9 @@
   }
 }
 .card__link {
-  @include fonts-properties(0.777rem, var(--ftf-fraunces), var(--ftw-black));
+  @include fonts-properties(0.78rem, var(--ftf-fraunces), var(--ftw-black));
   color: var(--very-dark-desaturated-blue);
-  letter-spacing: 3;
+  letter-spacing: 2px;
   text-transform: uppercase;
   z-index: 1;
   position: relative;
@@ -37,7 +37,7 @@
     height: 0.7rem;
     margin-top: 0.5rem;
     background: var(--yellow);
-    opacity: 0.5;
+    opacity: 0.2;
     border-radius: 2rem;
     z-index: -1;
 
