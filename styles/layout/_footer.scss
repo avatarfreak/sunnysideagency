@@ -28,7 +28,9 @@
 
   &__link {
     @include fonts-properties(1rem, var(--ftf-barlow), var(--ftw-semi-bold));
+    @include transition(color);
     color: var(--dark-moderate-cyan-footer);
+
     &:hover {
       color: var(--white);
     }
@@ -40,9 +42,12 @@
     gap: 1rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    a {
+      @include transition(filter);
+    }
 
     & a:hover {
-      filter: brightness(100);
+      filter: brightness(10);
     }
   }
 }
