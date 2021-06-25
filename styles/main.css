@@ -14,7 +14,7 @@
   --grayish-blue: hsl(210, 4%, 67%);
   --white: hsl(0, 0%, 100%);
   --ftw-semi-bold: 600;
-  --ftw-heavy: 900;
+  --ftw-black: 900;
   --ftw-bold: 700;
   --ftf-barlow: "Barlow", sans-serif;
   --ftf-fraunces: "Fraunces", serif;
@@ -33,6 +33,7 @@ html {
 body {
   margin: 0 auto;
   min-height: 100vh;
+  text-align: center;
 }
 
 ul {
@@ -47,6 +48,87 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.hero {
+  background: url(../../images/mobile/image-header.jpg) center/cover no-repeat;
+  position: relative;
+  height: 24.2222rem;
+  z-index: -1;
+  text-align: center;
+}
+.hero__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__title {
+  color: white;
+  font-size: 40px;
+  font-family: var(--ftf-fraunces);
+  font-weight: var(--ftw-heavy);
+  text-transform: uppercase;
+  padding: 3rem;
+}
+
+.card {
+  background: var(--base-color);
+}
+.card__body {
+  padding: 2.5rem 1.5rem;
+}
+.card__title {
+  font-size: 1.78rem;
+  font-family: var(--ftf-fraunces);
+  font-weight: var(--ftw-black);
+}
+.card__text {
+  font-size: 1rem;
+  font-family: var(--ftf-barlow);
+  font-weight: var(--ftw-semi-bold);
+  line-height: 1.6;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--dark-grayish-blue);
+}
+.card .audience::after {
+  background: var(--soft-red);
+}
+
+.image-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100%;
+}
+
+.body {
+  width: 21rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.55rem;
+  font-family: var(--ftf-fraunces);
+  font-weight: var(--ftw-black);
+}
+
+.text {
+  font-size: 0.9rem;
+  font-family: var(--ftf-barlow);
+  font-weight: var(--ftw-semi-bold);
+  line-height: 1.7;
+  padding: 1rem;
+}
+
+.graphic {
+  background: url(../../images/mobile/image-graphic-design.jpg) center/cover no-repeat;
+  color: var(--dark-cyan-graphic-text);
+}
+
+.photography {
+  background: url(../../images/mobile/image-photography.jpg) center/cover no-repeat;
+  color: var(--dark-blue-photography-text);
 }
 
 .btn {
@@ -69,25 +151,34 @@ img {
   opacity: 0.8;
 }
 
-.hero {
-  background: url(../../images/mobile/image-header.jpg) center/cover no-repeat;
-  position: relative;
-  height: 24.2222rem;
-  z-index: -1;
-  text-align: center;
-}
-.hero__arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero__title {
-  color: white;
-  font-size: 40px;
+.card__link {
+  font-size: 0.777rem;
   font-family: var(--ftf-fraunces);
-  font-weight: var(--ftw-heavy);
+  font-weight: var(--ftw-black);
+  color: var(--very-dark-desaturated-blue);
+  letter-spacing: 3;
   text-transform: uppercase;
-  padding: 3rem;
+  z-index: 1;
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.card__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.7rem;
+  margin-top: 0.5rem;
+  background: var(--yellow);
+  opacity: 0.5;
+  border-radius: 2rem;
+  z-index: -1;
+  transition: opacity 0.5s ease-in-out;
+}
+.card__link:hover::after {
+  opacity: 1;
 }
 
 .navbar {
