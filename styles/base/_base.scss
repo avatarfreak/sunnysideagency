@@ -25,3 +25,9 @@ img {
   height: auto;
   display: block;
 }
+.attribution {
+  font-size: 0.7rem;
+  a {
+    color: var(--dark-cyan-graphic-text);
+  }
+}
