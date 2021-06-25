@@ -207,7 +207,7 @@ img {
   margin: 1.5rem 0;
   display: inline-block;
   color: var(--very-dark-desaturated-blue);
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .btn:hover, .btn:focus {
   opacity: 0.8;
@@ -237,7 +237,7 @@ img {
   opacity: 0.2;
   border-radius: 2rem;
   z-index: -1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .card__link:hover::after {
   opacity: 1;
@@ -250,13 +250,16 @@ img {
   justify-content: space-between;
   position: relative;
 }
+.navbar__toggler img.active {
+  opacity: 0.6;
+}
 .navbar .nav {
   position: absolute;
   text-align: center;
   top: 0;
   left: 0;
   width: 100%;
-  transform: translateY(30%);
+  transform: translateY(20%);
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.5s ease;
@@ -264,12 +267,13 @@ img {
 .navbar .nav.active {
   visibility: visible;
   opacity: 1;
-  transform: translateY(50%);
+  transform: translateY(35%);
 }
 .navbar .nav__list {
   margin: 0 1.5rem;
   background: var(--white);
   position: relative;
+  padding: 2rem 0;
 }
 .navbar .nav__list::before {
   content: "";
@@ -290,7 +294,7 @@ img {
   font-weight: var(--ftw-semi-bold);
   display: block;
   color: var(--very-dark-grayish-blue);
-  transition: color 0.5s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .navbar .nav__item__link:hover {
   color: var(--blue);
@@ -323,6 +327,7 @@ img {
   font-size: 1rem;
   font-family: var(--ftf-barlow);
   font-weight: var(--ftw-semi-bold);
+  transition: color 0.3s ease-in-out;
   color: var(--dark-moderate-cyan-footer);
 }
 .footer__link:hover {
@@ -336,6 +341,9 @@ img {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+.footer__social a {
+  transition: filter 0.3s ease-in-out;
+}
 .footer__social a:hover {
-  filter: brightness(100);
+  filter: brightness(10);
 }/*# sourceMappingURL=main.css.map */
