@@ -32,7 +32,6 @@ html {
 
 body {
   margin: 0 auto;
-  background: cadetblue;
   min-height: 100vh;
 }
 
@@ -68,6 +67,27 @@ img {
 }
 .btn:hover, .btn:focus {
   opacity: 0.8;
+}
+
+.hero {
+  background: url(../../images/mobile/image-header.jpg) center/cover no-repeat;
+  position: relative;
+  height: 24.2222rem;
+  z-index: -1;
+  text-align: center;
+}
+.hero__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__title {
+  color: white;
+  font-size: 40px;
+  font-family: var(--ftf-fraunces);
+  font-weight: var(--ftw-heavy);
+  text-transform: uppercase;
+  padding: 3rem;
 }
 
 .navbar {
