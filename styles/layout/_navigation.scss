@@ -8,13 +8,19 @@
   justify-content: space-between;
   position: relative;
 
+  &__toggler img {
+    &.active {
+      opacity: 0.6;
+    }
+  }
+
   & .nav {
     position: absolute;
     text-align: center;
     top: 0;
     left: 0;
     width: 100%;
-    transform: translateY(30%);
+    transform: translateY(20%);
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.4s ease, transform 0.5s ease;
@@ -22,13 +28,14 @@
     &.active {
       visibility: visible;
       opacity: 1;
-      transform: translateY(50%);
+      transform: translateY(35%);
     }
 
     &__list {
       margin: 0 1.5rem;
       background: var(--white);
       position: relative;
+      padding: 2rem 0;
 
       &::before {
         content: "";
