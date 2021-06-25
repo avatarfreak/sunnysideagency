@@ -1,0 +1,42 @@
+@use "../abstract/mixin/" as *;
+
+.testimonial {
+  padding: 2.4rem 1.2rem;
+  background: var(--base-color);
+
+  &__card {
+    max-width: 375px;
+  }
+  &__title {
+    @include fonts-properties(0.89rem, var(--ftf-fraunces), var(--ftw-black));
+    color: var(--grayish-blue);
+    letter-spacing: 4.05px;
+    text-transform: uppercase;
+  }
+  &__avatar {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    img {
+      display: inline-block;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+    }
+  }
+  &__text {
+    @include fonts-properties(1rem, var(--ftf-barlow), var(--ftw-semi-bold));
+    line-height: 1.7;
+    color: var(--very-dark-grayish-blue);
+    padding: 1rem 0;
+  }
+  &__author {
+    @include fonts-properties(1rem, var(--ftf-fraunces), var(--ftw-bold));
+    color: var(--very-dark-desaturated-blue);
+  }
+  &__designates {
+    @include fonts-properties(0.78rem, var(--ftf-barlow), var(--ftw-semi-bold));
+    padding-bottom: 2rem;
+    line-height: 2.5;
+    color: var(--grayish-blue);
+  }
+}
