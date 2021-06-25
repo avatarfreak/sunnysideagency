@@ -58,16 +58,13 @@ img {
 }
 
 .hero {
-  background: url(../../images/mobile/image-header.jpg) center/cover no-repeat;
+  background: url(../../images/mobile/image-header.jpg) center bottom/cover no-repeat;
   position: relative;
   height: 24.2222rem;
   z-index: -1;
-  text-align: center;
-}
-.hero__arrow {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 .hero__title {
   color: white;
@@ -77,6 +74,7 @@ img {
   font-size: 40px;
   text-transform: uppercase;
   padding: 3rem;
+  letter-spacing: 6px;
 }
 
 .card {

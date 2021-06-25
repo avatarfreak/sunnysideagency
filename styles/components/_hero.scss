@@ -1,21 +1,19 @@
 @use '../abstract/mixin/' as *;
 .hero {
-  background: url(../../images/mobile/image-header.jpg) center / cover no-repeat;
+  background: url(../../images/mobile/image-header.jpg) center bottom / cover no-repeat;
   position: relative;
   height: 24.2222rem;
   z-index: -1;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  &__arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   &__title {
     color: white;
     @include fonts-properties(clamp(2rem, 2vw, 2.223rem), var(--ftf-fraunces), var(--ftw-black));
     font-size: 40px;
     text-transform: uppercase;
     padding: 3rem;
+    letter-spacing: 6px;
   }
 }
