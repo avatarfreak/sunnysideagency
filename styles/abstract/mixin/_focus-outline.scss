@@ -1,0 +1,5 @@
+@mixin focus-outline($width: 1px, $style: dashed, $color: null) {
+  &:focus-visible {
+    outline: $width $style $color;
+  }
+}

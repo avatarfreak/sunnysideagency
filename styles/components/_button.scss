@@ -1,0 +1,20 @@
+@use "../abstract/" as *;
+.btn {
+  @include fonts-properties(14px, var(--ftf-fraunces), var(--ftw-bold));
+  background: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  width: 7.83rem;
+  height: 3.11rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+  display: inline-block;
+  color: var(--very-dark-desaturated-blue);
+
+  @include transition(opacity);
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}

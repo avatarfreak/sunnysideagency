@@ -1,0 +1,124 @@
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --blue: hsl(200, 100%, 63%);
+  --dark-cyan-graphic-text: hsl(167, 40%, 24%);
+  --dark-blue-photography-text: hsl(198, 62%, 26%);
+  --dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+  --moderate-cyan-footer: hsl(167, 44%, 70%);
+  --cyan-footer-logo-text: #2c7566;
+  --base-color: hsl(26, 100%, 99%);
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --ftw-semi-bold: 600;
+  --ftw-heavy: 900;
+  --ftw-bold: 700;
+  --ftf-barlow: "Barlow", sans-serif;
+  --ftf-fraunces: "Fraunces", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0 auto;
+  background: cadetblue;
+  min-height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn {
+  font-size: 14px;
+  font-family: var(--ftf-fraunces);
+  font-weight: var(--ftw-bold);
+  background: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  width: 7.83rem;
+  height: 3.11rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+  display: inline-block;
+  color: var(--very-dark-desaturated-blue);
+  transition: opacity 0.5s ease-in-out;
+}
+.btn:hover, .btn:focus {
+  opacity: 0.8;
+}
+
+.navbar {
+  background: var(--blue);
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.navbar .nav {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(30%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.5s ease;
+}
+.navbar .nav.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(50%);
+}
+.navbar .nav__list {
+  margin: 0 1.5rem;
+  background: var(--white);
+  position: relative;
+}
+.navbar .nav__list::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -1.4rem;
+  border-bottom: 1.5rem solid var(--white);
+  border-left: 1.5rem solid transparent;
+  width: 0;
+  height: 0;
+}
+.navbar .nav__item {
+  line-height: 2.5;
+}
+.navbar .nav__item__link {
+  font-size: 1rem;
+  font-family: var(--ftf-barlow);
+  font-weight: var(--ftw-semi-bold);
+  display: block;
+  color: var(--very-dark-grayish-blue);
+  transition: color 0.5s ease-in-out;
+}
+.navbar .nav__item__link:hover {
+  color: var(--blue);
+}/*# sourceMappingURL=main.css.map */

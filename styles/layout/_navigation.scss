@@ -1,0 +1,60 @@
+@use '../abstract' as *;
+@use '../components' as *;
+
+.navbar {
+  background: var(--blue);
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  & .nav {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(30%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.5s ease;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(50%);
+    }
+
+    &__list {
+      margin: 0 1.5rem;
+      background: var(--white);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -1.4rem;
+        border-bottom: 1.5rem solid var(--white);
+        border-left: 1.5rem solid transparent;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &__item {
+      line-height: 2.5;
+
+      &__link {
+        @include fonts-properties(1rem, var(--ftf-barlow), var(--ftw-semi-bold));
+        display: block;
+        color: var(--very-dark-grayish-blue);
+        @include transition(color);
+
+        &:hover {
+          color: var(--blue);
+        }
+      }
+    }
+  }
+}
