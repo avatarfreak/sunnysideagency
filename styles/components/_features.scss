@@ -1,10 +1,15 @@
 @use "../abstract/mixin" as *;
+
 .card {
   background: var(--base-color);
 
   &__body {
     padding: 2.5rem 1.5rem;
+    @include breakpoint(tablet) {
+      padding: 1.5rem 1.5rem;
+    }
   }
+
   &__title {
     @include fonts-properties(1.78rem, var(--ftf-fraunces), var(--ftw-black));
     color: var(--very-dark-desaturated-blue);
@@ -27,7 +32,7 @@
 }
 
 %body {
-  width: 21rem;
+  max-width: 21rem;
   padding-bottom: 2rem;
 }
 
@@ -74,5 +79,22 @@
   }
   &__text {
     @extend %text;
+  }
+}
+
+.features {
+  @include breakpoint(tablet) {
+    @include grid-column(2);
+  }
+  & section {
+    &.transform,
+    &.audience {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:first-child {
+      @include re-order(1, 2);
+    }
   }
 }
