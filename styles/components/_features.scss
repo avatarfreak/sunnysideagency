@@ -5,14 +5,32 @@
 
   &__body {
     padding: 2.5rem 1.5rem;
+
     @include breakpoint(tablet) {
       padding: 1.5rem 1.5rem;
+    }
+    @include breakpoint(laptop) {
+      text-align: left;
+    }
+    @include breakpoint(desktop) {
+      margin: 0 3rem;
+    }
+    @include breakpoint(desktop) {
+      margin: 0 6rem;
     }
   }
 
   &__title {
     @include fonts-properties(1.78rem, var(--ftf-fraunces), var(--ftw-black));
     color: var(--very-dark-desaturated-blue);
+
+    @include breakpoint(desktop) {
+      font-size: (36 / 18) * 1rem;
+    }
+
+    @include breakpoint(lg-desktop) {
+      font-size: (40 / 18) * 1rem;
+    }
   }
 
   &__text {
@@ -21,6 +39,10 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     color: var(--dark-grayish-blue);
+
+    @include breakpoint(laptop) {
+      padding: 2rem 0;
+    }
   }
 }
 
@@ -38,6 +60,7 @@
 
 %title {
   @include fonts-properties(1.55rem, var(--ftf-fraunces), var(--ftw-black));
+  padding-bottom: 1rem;
 }
 
 %text {
@@ -51,6 +74,9 @@
 
   &__image-overlay {
     background: url(../../images/mobile/image-graphic-design.jpg) center / cover no-repeat;
+    @include breakpoint(tablet) {
+      background: url(../../images/desktop/image-graphic-design.jpg) center / cover no-repeat;
+    }
     @extend %image-overlay;
   }
   &__body {
@@ -65,9 +91,12 @@
 }
 
 .photo {
-  background: url(../../images/mobile/image-photography.jpg) center / cover no-repeat;
   color: var(--dark-blue-photography-text);
   &__image-overlay {
+    background: url(../../images/mobile/image-photography.jpg) center / cover no-repeat;
+    @include breakpoint(tablet) {
+      background: url(../../images/desktop/image-photography.jpg) center / cover no-repeat;
+    }
     @extend %image-overlay;
   }
 
