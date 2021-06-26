@@ -8,12 +8,26 @@
   align-items: center;
   flex-direction: column;
 
+  @include breakpoint(tablet) {
+    background: url(../../images/desktop/image-header.jpg) center bottom / cover no-repeat;
+    height: (690 / 18) * 1rem;
+  }
+
   &__title {
     color: white;
-    @include fonts-properties(clamp(2rem, 2vw, 2.223rem), var(--ftf-fraunces), var(--ftw-black));
-    font-size: 40px;
+    @include fonts-properties(2.22rem, var(--ftf-fraunces), var(--ftw-black));
     text-transform: uppercase;
-    padding: 3rem;
+    padding: 2.5rem 1rem;
     letter-spacing: 6px;
+
+    @include breakpoint(tablet) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__arrow {
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+    }
   }
 }
