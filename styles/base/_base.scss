@@ -7,9 +7,12 @@ html {
   font-size: 18px;
 }
 body {
-  margin: 0 auto;
   min-height: 100vh;
   text-align: center;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 ul {
