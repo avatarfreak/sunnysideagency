@@ -4,8 +4,21 @@
   padding: 2.4rem 1.2rem;
   background: var(--base-color);
 
+  @include breakpoint(tablet) {
+    padding-top: 4rem;
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include breakpoint(tablet) {
+      margin: 2rem 1rem;
+      gap: 2rem;
+    }
+  }
   &__card {
-    max-width: 375px;
+    flex: 1 1 15em;
+    max-width: 20rem;
   }
   &__title {
     @include fonts-properties(0.89rem, var(--ftf-fraunces), var(--ftw-black));
