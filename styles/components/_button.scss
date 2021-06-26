@@ -15,7 +15,7 @@
     background: var(--white);
   }
 
-  @include transition(opacity, 0.5s);
+  @include transition(background);
   &:hover,
   &:focus {
     background: hsla(198, 100%, 68%, 1);
