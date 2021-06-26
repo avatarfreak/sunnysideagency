@@ -42,12 +42,11 @@
     gap: 1rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    a {
-      @include transition(filter);
-    }
-
-    & a:hover {
-      filter: brightness(10);
+    li {
+      @include transition(filter, 0.2s);
+      &:hover {
+        filter: brightness(100);
+      }
     }
   }
 }
