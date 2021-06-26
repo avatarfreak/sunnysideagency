@@ -27,13 +27,13 @@
 %image-overlay {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 100%;
+  height: (600 / 18) * 1rem;
+  padding-top: 22rem;
 }
 
 %body {
   max-width: 21rem;
-  padding-bottom: 2rem;
+  // padding-bottom: 2rem;
 }
 
 %title {
@@ -43,7 +43,7 @@
 %text {
   @include fonts-properties(0.9rem, var(--ftf-barlow), var(--ftw-semi-bold));
   line-height: 1.7;
-  padding: 1rem;
+  // padding: 1rem;
 }
 
 .graphic {
