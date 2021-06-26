@@ -17,41 +17,62 @@
     padding-bottom: 0.5rem;
     color: var(--dark-grayish-blue);
   }
-
-  .audience {
-    &::after {
-      background: var(--soft-red);
-    }
-  }
 }
 
-.image-overlay {
+%image-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 100%;
 }
 
-.body {
+%body {
   width: 21rem;
   padding-bottom: 2rem;
 }
-.title {
+
+%title {
   @include fonts-properties(1.55rem, var(--ftf-fraunces), var(--ftw-black));
 }
 
-.text {
+%text {
   @include fonts-properties(0.9rem, var(--ftf-barlow), var(--ftw-semi-bold));
   line-height: 1.7;
   padding: 1rem;
 }
 
 .graphic {
-  background: url(../../images/mobile/image-graphic-design.jpg) center / cover no-repeat;
   color: var(--dark-cyan-graphic-text);
+
+  &__image-overlay {
+    background: url(../../images/mobile/image-graphic-design.jpg) center / cover no-repeat;
+    @extend %image-overlay;
+  }
+  &__body {
+    @extend %body;
+  }
+  &__title {
+    @extend %title;
+  }
+  &__text {
+    @extend %text;
+  }
 }
 
-.photography {
+.photo {
   background: url(../../images/mobile/image-photography.jpg) center / cover no-repeat;
   color: var(--dark-blue-photography-text);
+  &__image-overlay {
+    @extend %image-overlay;
+  }
+
+  &__body {
+    @extend %body;
+  }
+  &__title {
+    @extend %title;
+  }
+  &__text {
+    @extend %text;
+  }
 }
