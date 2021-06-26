@@ -17,7 +17,7 @@
     }
   }
   &__card {
-    flex: 1 1 15em;
+    flex: 1 1 20em;
     max-width: 20rem;
   }
   &__title {
@@ -25,6 +25,10 @@
     color: var(--grayish-blue);
     letter-spacing: 4.05px;
     text-transform: uppercase;
+
+    @include breakpoint(laptop) {
+      font-size: 1rem;
+    }
   }
   &__avatar {
     padding-top: 2rem;
