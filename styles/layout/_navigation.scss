@@ -8,7 +8,19 @@
   justify-content: space-between;
   position: relative;
 
+  &__brand {
+    & svg {
+      @include breakpoint(tablet) {
+        width: 173px;
+        height: 33px;
+      }
+    }
+  }
+
   &__toggler img {
+    @include breakpoint(tablet) {
+      display: none;
+    }
     &.active {
       opacity: 0.6;
     }
@@ -25,10 +37,20 @@
     opacity: 0;
     transition: opacity 0.4s ease, transform 0.5s ease;
 
+    @include breakpoint(tablet) {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     &.active {
       visibility: visible;
       opacity: 1;
       transform: translateY(35%);
+
+      @include breakpoint(tablet) {
+        transform: translateY(0);
+      }
     }
 
     &__list {
@@ -36,6 +58,14 @@
       background: var(--white);
       position: relative;
       padding: 2rem 0;
+
+      @include breakpoint(tablet) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: transparent;
+        padding: 0;
+      }
 
       &::before {
         content: "";
@@ -46,20 +76,33 @@
         border-left: 1.5rem solid transparent;
         width: 0;
         height: 0;
+
+        @include breakpoint(tablet) {
+          display: none;
+        }
       }
     }
 
     &__item {
       line-height: 2.5;
+      @include breakpoint(tablet) {
+        margin-left: 3rem;
+      }
 
       &__link {
         @include fonts-properties(1rem, var(--ftf-barlow), var(--ftw-semi-bold));
         display: block;
         color: var(--very-dark-grayish-blue);
         @include transition(color);
+        @include breakpoint(tablet) {
+          color: var(--white);
+        }
 
         &:hover {
-          color: var(--blue);
+          color: var(--very-dark-desaturated-blue);
+          @include breakpoint(tablet) {
+            color: var(--yellow);
+          }
         }
       }
     }
