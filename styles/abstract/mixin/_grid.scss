@@ -3,3 +3,9 @@
   grid-template-columns: repeat($col, $size);
   @content;
 }
+
+@mixin re-order($row: 1, $col: 1) {
+  display: grid;
+  grid-row: $row;
+  grid-column: $col;
+}
