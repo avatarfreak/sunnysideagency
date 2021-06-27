@@ -16,3 +16,9 @@ document.addEventListener("click", (evt) => {
   nav.classList.remove("active");
   menuToggler.classList.remove("active");
 });
+
+//On window resize close drop down menu
+window.addEventListener("resize", () => {
+  nav.classList.remove("active");
+  menuToggler.classList.remove("active");
+});
