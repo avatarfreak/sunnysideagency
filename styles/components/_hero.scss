@@ -1,4 +1,5 @@
 @use '../abstract/mixin/' as *;
+@use "../base/animation" as *;
 .hero {
   background: url(../../images/mobile/image-header.jpg) center bottom / cover no-repeat;
   position: relative;
@@ -26,6 +27,7 @@
   }
 
   &__arrow {
+    animation: downArrow 2s linear infinite;
     @include breakpoint(tablet) {
       margin-top: 4rem;
     }
