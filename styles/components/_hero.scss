@@ -1,7 +1,7 @@
 @use '../abstract/mixin/' as *;
 @use "../base/animation" as *;
 .hero {
-  background: url(../../images/mobile/image-header.jpg) center bottom / cover no-repeat;
+  background: url(../images/mobile/image-header.jpg) center bottom / cover no-repeat;
   position: relative;
   height: 24.2222rem;
   z-index: -1;
@@ -10,7 +10,7 @@
   flex-direction: column;
 
   @include breakpoint(tablet) {
-    background: url(../../images/desktop/image-header.jpg) center bottom / cover no-repeat;
+    background: url(../images/desktop/image-header.jpg) center bottom / cover no-repeat;
     height: (690 / 18) * 1rem;
   }
 
