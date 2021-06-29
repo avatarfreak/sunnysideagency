@@ -536,10 +536,10 @@ img {
   justify-content: center;
   align-items: center;
   padding: 1.5rem 1rem;
-  gap: 0 3.5rem;
 }
 .footer__item {
   line-height: 2;
+  margin: 0 1rem;
 }
 .footer__link {
   font-size: 1rem;
@@ -555,11 +555,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 .footer__social li {
+  margin: 0 0.5rem;
   transition: filter 0.2s ease-in-out;
 }
 .footer__social li:hover {
